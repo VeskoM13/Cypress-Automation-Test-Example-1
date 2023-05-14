@@ -61,7 +61,7 @@ note:
 - If remove the "skip" feature, the test should pass because I have covered all the status codes that have appeared so far,
  (If it doesn't pass the first time, please repeat the test).
  
-- Validate the broken link address test will not pass in the Firefox browser because of their web security standards that are not supported by Cypress.
+- "Validate the broken link address" test will not pass in the Firefox browser because of their web security standards that are not supported by Cypress.
 
 - I have implemented customized scripts in the package.json file
 
