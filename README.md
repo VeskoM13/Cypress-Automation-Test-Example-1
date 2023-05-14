@@ -60,6 +60,8 @@ note:
 - In the last test where I tested all links with status code assertion, I left the 'skip' feature because the page contains about 30 very unstable links with different status messages. Under normal circumstances, the assertion should contain only status code 200 and status codes for redirection 301 and 302, but here I had to expand with codes from 400 to 500 for the test to pass.
 - If remove the "skip" feature, the test should pass because I have covered all the status codes that have appeared so far,
  (If it doesn't pass the first time, please repeat the test).
+ 
+- Validate the broken link address test will not pass in the Firefox browser because of their web security standards that are not supported by Cypress.
 
 - I have implemented customized scripts in the package.json file
 
