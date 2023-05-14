@@ -145,8 +145,13 @@ describe("Verify Checkbox", () => {
 //*******************************************   Alert Example Verification  ***********************************************/
 
 describe("Verify Alert Example", () => {
+  before(function () {
+    cy.fixture("example.json").then(function (data) {
+      globalThis.data = data;
+    });
+  });
   it("Validate that alert box works correctly when clicking ok", () => {
-    cy.get("#name").type("Veselin Micunovic");
+    cy.get("#name").type(data.alertData);
     cy.get("#confirmbtn").click();
 
     cy.on("window:alert", (str) => {

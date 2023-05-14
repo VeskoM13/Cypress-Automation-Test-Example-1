@@ -10,6 +10,7 @@
 ## Project structure 
 
 * Tests are stored in cypress\e2e\tests
+* Test data are stored in cypress\fixtures\example.json
 
 ## Cypress installation commands :
 
