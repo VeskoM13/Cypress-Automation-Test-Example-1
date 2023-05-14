@@ -28,7 +28,7 @@
 ## From Sources
 
 1. Run git clone https://github.com/VeskoM13/max-solutions-test.git
-2. Go into the cloned folder with cd MaxSolutionsTest
+2. Go into the cloned folder with cd max-solutions-test
 3. Run npm install (only has to be done before first start or when you change the source code)
 4. npx cypress open
 

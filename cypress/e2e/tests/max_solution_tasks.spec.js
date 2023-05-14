@@ -268,6 +268,7 @@ describe("Verify broken link", () => {
     });
   });
 
+  //This test may not pass in the Firefox browser because of their web security standards that are not supported by Cypress
   it("Validate the broken link web address", () => {
     cy.get("strong > a").invoke("removeAttr", "target").click({ force: true });
 
