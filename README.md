@@ -24,19 +24,28 @@
 
 1. npx cypress open
 
+
+## From Sources
+
+1. Run git clone https://github.com/VeskoM13/max-solutions-test.git
+2. Go into the cloned folder with cd MaxSolutionsTest
+3. Run npm install (only has to be done before first start or when you change the source code)
+4. npx cypress open
+
+
 ## Commands from customized scripts  
 
-1. npm run triggerAllTests-headless                // command to run all tests in headless mode
-2. npm run triggerAllTests-headed                  // command to run tests in headed mode
-3. npm run triggerMax_Solution_Tasks               // command to run specific test in headless mode
+1. npm run triggerAllTests-headless     - command to run all tests in headless mode
+2. npm run triggerAllTests-headed       - command to run tests in headed mode
+3. npm run triggerMax_Solution_Tasks    - command to run specific test in headless mode
 
 
 ## Commands for Mochawesome reports:
 
-1. npm run delete-results                         // command to delete all reports from results folder
-2. npm run mochawesome-merge                      // command to merge all reports in one report
-3. npm run delete-mochawesome-report              // command to delete report from mochawesome-report folder
-4. npm run cypress-regression-pack                // command that combines multiple custom scripts
+1. npm run delete-results               - command to delete all reports from results folder
+2. npm run mochawesome-merge            - command to merge all reports in one report
+3. npm run delete-mochawesome-report    - command to delete report from mochawesome-report folder
+4. npm run cypress-regression-pack      - command that combines multiple custom scripts
 
 
 note:

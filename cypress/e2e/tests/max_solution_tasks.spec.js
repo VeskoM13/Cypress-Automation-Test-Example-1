@@ -24,7 +24,7 @@ describe("Verify radio buttons", () => {
       cy.wrap($radio).check().should("be.checked");
     });
   });
-  it("Successful selection of a specific radio button", () => {
+  it("Select a specific radio button", () => {
     cy.get("#radio-btn-example")
       .find("[value='radio1']")
       .check()
@@ -84,7 +84,7 @@ describe("Verify Suggestion Class Example", () => {
       .should("not.be.visible");
   });
   //The test checks whether the list is visible if a nonmatching input is entered
-  it("Negative Scenario - Non matching input", () => {
+  it("Negative Scenario - Nonmatching input", () => {
     cy.get("#autocomplete")
       .clear()
       .type("Cammerron")
@@ -179,7 +179,7 @@ describe("Verify Alert Example", () => {
 //*******************************************   Visible and Invisible elements  ***********************************************/
 
 describe("Handling visible and invisible elements", () => {
-  it("Validate that visible and invisible elements works properly", () => {
+  it("Verify that visible and invisible elements work properly", () => {
     cy.get("#displayed-text").should("be.visible");
     cy.get("#hide-textbox").click();
     cy.get("#displayed-text").should("not.be.visible");
@@ -261,7 +261,7 @@ describe("Handling data in Web Table", () => {
 
 //*******************************************   Verify broken link ***********************************************/
 
-describe("Handling broken link", () => {
+describe("Verify broken link", () => {
   it("Validate the broken link status message", () => {
     cy.get("strong > a").then((a) => {
       cy.request(a.prop("href")).its("status").should("eq", 200);
