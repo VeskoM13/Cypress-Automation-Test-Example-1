@@ -69,7 +69,7 @@ note:
 - Additionally, I have implemented the Mochawesome HTML Reports generator.
   Using customized scripts, reports can be deleted both from the results folder and from the mochawesome-report folder, all reports can be merged into one file, and I also implemented a command that combines several scripts, and whit one command, all reports from both folders are deleted (results and mochawesome-report folder), a new test is started in headless mode and all reports are merged into one if there is more than one generated test.
 
-- Although I always use the Page Object Pattern when writing tests, this time I decided to write a simpler test and write everything in one file for easier review, and also there was no need to use the hooks that are normally always present in my tests.
+- Although I always use the Page Object Pattern when writing tests, this time I decided to write a simpler test and write everything in one file for easier review.
 
 
 

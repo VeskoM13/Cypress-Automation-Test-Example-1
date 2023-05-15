@@ -1,3 +1,6 @@
 {
-  "alertData": "Veselin Micunovic"
+  "alertData": "Veselin Micunovic",
+  "countryInput": "CA",
+  "caseInsensitivityName": "CaMeR",
+  "invalidCountryName": "Cammmeroon"
 }

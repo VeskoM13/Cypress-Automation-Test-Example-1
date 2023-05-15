@@ -55,8 +55,13 @@ describe("Verify radio buttons", () => {
 //*******************************************  Autocomplete list verification  ***********************************************/
 
 describe("Verify Suggestion Class Example", () => {
+  before(function () {
+    cy.fixture("example.json").then(function (data) {
+      globalThis.data = data;
+    });
+  });
   it("Select specific country", () => {
-    cy.get("#autocomplete").type("CA");
+    cy.get("#autocomplete").type(data.countryInput);
     cy.get("#ui-id-1 > *").each(($el, index, $list) => {
       const country = $el.text();
       const countryToSelect = "Cameroon";
@@ -71,7 +76,7 @@ describe("Verify Suggestion Class Example", () => {
   it("Negative Scenario - Case insensitivity", () => {
     cy.get("#autocomplete")
       .clear()
-      .type("CaMerO")
+      .type(data.caseInsensitivityName)
       .get("#ui-id-1 > *")
       .should("be.visible");
   });
@@ -87,7 +92,7 @@ describe("Verify Suggestion Class Example", () => {
   it("Negative Scenario - Nonmatching input", () => {
     cy.get("#autocomplete")
       .clear()
-      .type("Cammerron")
+      .type(data.invalidCountryName)
       .get("#ui-id-1 > *")
       .should("not.be.visible");
   });
@@ -166,7 +171,7 @@ describe("Verify Alert Example", () => {
   it("Validate js confirm alert box using a stub", () => {
     const stub = cy.stub();
     cy.on("window:confirm", stub);
-    cy.get("#name").type("Veselin Micunovic");
+    cy.get("#name").type(data.alertData);
 
     cy.get("#confirmbtn")
       .click()
